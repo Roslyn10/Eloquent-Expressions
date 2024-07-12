@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quote of the day</title>
+        <link rel="stylesheet" href="quote-daily.css">
+    </head>
+    <body>
+        <div class="quote-box">
+            <h2>Quote of the day</h2>
+            <blockquote id="quote-text">Loading...</blockquote>
+            <span id="quote-author">Loading...</span>
+            <div>
+                <button onclick="fetchQuote()">New quote</button>
+                <button>Tweet</button>
+            </div>
+        </div>
+
+        <script>
+            async function fetchQuote() {
+                const response = await fetch('/quote');
+                const data = await response.json();
+                if (data.error) {
+                    document.getElementById('quote-text').textContent = 'Error fetching quote';
+                    document.getElementById('quote-author').textContent = '';
+                } else {
+                    document.getElementById('quote-text').textContent = data[0].quote;
+                    document.getElementById('quote-author').textContent = data[0].author;
+                }
+            }
+
+            // Fetch a quote when the page loads
+            window.onload = fetchQuote;
+        </script>
+    </body>
+</html>
