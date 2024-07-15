@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+BE+WAL:wght@100..400&family=Playwrite+CL:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Aclonica&family=Aladin&family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Allerta+Stencil&family=Almendra+Display&family=Bad+Script&family=Cherry+Swash:wght@400;700&display=swap');
 
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Playwrite CL', cursive ;
+    font-family: 'Cherry Swash', serif;
 }
 body{
-    background: #7b8fef;
+    background: #d5279b;
 }
 .quote-box {
     background: #fff;
