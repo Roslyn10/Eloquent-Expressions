@@ -8,7 +8,8 @@
     font-family: 'Playwrite CL', cursive ;
 }
 body{
-    background: #7b8fef;
+    background: #7b8fef url('Stars.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 .quote-box {
     background: #fff;
