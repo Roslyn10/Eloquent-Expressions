@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+BE+WAL:wght@100..400&family=Playwrite+CL:wght@100..400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap')
 
 *{
     margin: 0;
@@ -8,7 +7,7 @@
     font-family: 'Playwrite CL', cursive ;
 }
 body{
-    background: #7b8fef;
+    background: #071354;
 }
 .quote-box {
     background: #fff;
