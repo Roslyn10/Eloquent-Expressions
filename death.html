@@ -8,11 +8,39 @@
     <body>
         <div class="quote-box">
             <h2>Quotes about Death</h2>
-            <blockquote>Loading...</blockquote>
-            <span>Loading...</span>
+            <blockquote id="quote-text">Loading...</blockquote>
+            <span id="quote-author">Loading...</span>
             <div>
                 <button onclick="fetchQuote()">New quote</button>
             </div>
         </div>
+
+        <script>
+            const category = 'death';
+            const apiKey = 'SQmx5Z961jvfFj5CFAT3Sg==0wOfzfyqn6cQYFuZ';
+            const apiUrl = 'https://api.api-ninjas.com/v1/quotes?category=${category}';
+
+            async function fetchQuote() {
+                try {
+                    const response = await fetch(apiUrl, {
+                        headers: {
+                            'X-Api-Key': apikey
+                        }
+                    });
+                    if (!response.ok) {
+                        throw new Error('HTTP error! status: ${response.status}');
+                    }
+                    const data = await response.json();
+                    const quote = data[0];
+                    document.getElementById('quote-text').textContent = quote.quote;
+                    document.getElementById('quotee-author').textContent = ''
+                } catch (error) {
+                    console.error('Error fetching quote:', error);
+                    document.getElementById('quote-text').textContent = 'Error fetching quote';
+                    document.getElementById('quote-author').textConent = '';
+                }
+            }
+            fetchQuote();
+        </script>
     </body>
 </html>
