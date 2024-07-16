@@ -25,7 +25,7 @@ def get_quote():
 
 @app.route('/')
 def serve_html():
-    return send_from_directory('', 'index.html')
+    return send_from_directory('', 'change.html')
 
 @app.route('/change.css')
 def serve_css():
