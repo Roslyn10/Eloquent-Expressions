@@ -5,14 +5,41 @@
         <title>Famous</title>
         <link rel="stylesheet" href="famous.css">
     </head>
-    <body>
-        <div class="quote-box">
-            <h2>Famous Quotes</h2>
-            <blockquote>Loading...</blockquote>
-            <span>Loading...</span>
-            <div>
-                <button onclick="fetchQuote()">New quote</button>
-            </div>
+    <div class="quote-box">
+        <h2>Famous Quotes</h2>
+        <blockquote id="quote-text"></blockquote>
+        <span id="quote-author"></span>
+        <div>
+            <button onclick="fetchQuote()">New quote</button>
         </div>
-    </body>
+    </div>
+
+    <script>
+        const category = 'famous';
+        const apiKey = 'zcwXT4Ao+jzDvWed2gRXpg==JBxojqpT5T9IkWQF';
+        const apiUrl = `https://api.api-ninjas.com/v1/quotes?category=${category}`;
+
+        async function fetchQuote() {
+            try {
+                const response = await fetch(apiUrl, {
+                    headers: {
+                        'X-Api-Key': apiKey
+                    }
+                });
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                const quote = data[0];
+                document.getElementById('quote-text').textContent = quote.quote;
+                document.getElementById('quote-author').textContent = `— ${quote.author}`;
+            } catch (error) {
+                console.error('Error fetching quote:', error);
+                document.getElementById('quote-text').textContent = 'Error fetching quote';
+                document.getElementById('quote-author').textContent = '';
+            }
+        }
+        fetchQuote();
+    </script>
+</body>
 </html>
