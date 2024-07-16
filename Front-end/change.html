@@ -18,7 +18,7 @@
         <script>
             async function fetchQuote() {
                 try {
-                    const response = await fetch('/api/quote');
+                    const response = await fetch('/Back-end/API/change-api.py');
                     if (!response.ok) {
                         throw new Error(`HTTP error! status: ${response.status}`);
                     }
