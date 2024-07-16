@@ -8,8 +8,8 @@
     <body>
         <div class="quote-box">
             <h2>Quotes about Death</h2>
-            <blockquote id="quote-text">Loading...</blockquote>
-            <span id="quote-author">Loading...</span>
+            <blockquote id="quote-text"></blockquote>
+            <span id="quote-author"></span>
             <div>
                 <button onclick="fetchQuote()">New quote</button>
             </div>
@@ -24,20 +24,20 @@
                 try {
                     const response = await fetch(apiUrl, {
                         headers: {
-                            'X-Api-Key': apikey
+                            'X-Api-Key': apiKey
                         }
                     });
                     if (!response.ok) {
-                        throw new Error('HTTP error! status: ${response.status}');
+                        throw new Error(`HTTP error! status: ${response.status}`);
                     }
                     const data = await response.json();
                     const quote = data[0];
                     document.getElementById('quote-text').textContent = quote.quote;
-                    document.getElementById('quotee-author').textContent = ''
+                    document.getElementById('quote-author').textContent = `— ${quote.author}`;
                 } catch (error) {
                     console.error('Error fetching quote:', error);
                     document.getElementById('quote-text').textContent = 'Error fetching quote';
-                    document.getElementById('quote-author').textConent = '';
+                    document.getElementById('quote-author').textContent = '';
                 }
             }
             fetchQuote();
