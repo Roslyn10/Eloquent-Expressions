@@ -92,3 +92,17 @@ footer {
     margin-left: auto;
     margin-right: auto;
 }
+
+#quoteoftheday a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f7e0d9;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#quoteoftheday a:hover {
+    background-color: #8a4b8a;
+    color: #fff;
+}
