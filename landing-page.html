@@ -3,17 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background Image Example</title>
+    <title>Eloquent Expressions</title>
     <style>
         body {
+            font-family: Arial, sans-serif;
             background-image: url('9604897.jpg');
-            background-size: auto;
+            background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #8a4b8a;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #8a4b8a;
+        }
+
+        footer {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body>
-    <p>Nothing yet</p>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#intro">Intro</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#features">Features</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="intro" class="container">
+        <h2>Are you seeking inspiration? Looking for a fresh perspective? Want to be motivated by the words of others?</h2>
+        <p>Welcome to Eloquent Expressions, where we curate inspiring quotes from various categories.</p>
+    </section>
+
+    <section id="about" class="container">
+        <h2>About Us</h2>
+        <p>I'm a student at ALX looking to delve into the world of Software Engineering. As a student facing challenges, staying motivated has often been tough. That's why I created Eloquent Expressions.</p>
+        <p>Through this website, I aim to share quotes that have personally motivated me and offer insights into the thoughts of others. Join us in shaping our journeys and inspiring each other to achieve more.</p>
+    </section>
+
+    <section id="features" class="container">
+        <h2>Features</h2>
+        <p><strong>Quote of the Day:</strong> Discover a new quote daily to kickstart your inspiration.</p>
+        <p><strong>Categorized Quotes:</strong> Browse quotes organized into different themes.</p>
+        <p><strong>Favorites:</strong> Save and revisit your favorite quotes effortlessly.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Eloquent Expressions. All rights reserved.</p>
+    </footer>
 </body>
 </html>
+
