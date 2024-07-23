@@ -8,7 +8,10 @@
     font-family:  'Emilys Candy', serif;
 }
 body{
-    background: #a23c80;
+    background-image: url('Inspiration-backgrounds.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .quote-box {
     background: #fff;

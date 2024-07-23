@@ -10,7 +10,7 @@
 body{
     background-image: url('Change-background.jpg');
     background-size: cover;
-    background-position: bottom;
+    background-position: center;
     background-repeat: no-repeat;
 }
 .quote-box {

@@ -8,7 +8,10 @@
     font-family: 'Bad Script', cursive;
 }
 body{
-    background: #7b8fef;
+    background-image: url('Friendship-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .quote-box {
     background: #fff;

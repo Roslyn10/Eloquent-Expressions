@@ -8,7 +8,10 @@
     font-family: 'Cherry Swash', serif;
 }
 body{
-    background: #d5279b;
+    background-image: url('Happiness-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .quote-box {
     background: #fff;

@@ -8,7 +8,10 @@
     font-family: 'Cinzel Decorative', serif;
 }
 body{
-    background: #8166c1;
+    background-image: url('Health-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .quote-box {
     background: #fff;

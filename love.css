@@ -9,7 +9,10 @@
     font-family:  'Jacques Francois Shadow', serif;
 }
 body{
-    background: #f4358b;
+    background-image: url('Love-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .quote-box {
     background: #fff;

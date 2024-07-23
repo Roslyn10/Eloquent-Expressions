@@ -8,7 +8,10 @@
     font-family: 'Alegreya SC', serif;
 }
 body{
-    background: #177d3e;
+    background-image: url('Family-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .quote-box {
     background: #fff;
