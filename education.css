@@ -8,7 +8,10 @@
     font-family: 'Aboreto', system-ui;
 }
 body{
-    background: #dd5373;
+    background-image: url('Education-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .quote-box {
     background: #fff;

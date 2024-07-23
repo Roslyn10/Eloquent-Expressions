@@ -8,7 +8,10 @@
     font-family: 'IM fell English SC', serif;
 }
 body{
-    background: #b2d145;
+    background-image: url('Change-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .quote-box {
     background: #fff;
