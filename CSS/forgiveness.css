@@ -9,7 +9,10 @@
     font-family: 'Almendra Display Bold', serif, 
 }
 body{
-    background: #3ccff8;
+    background-image: url('Images/Forgiveness-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .quote-box {
     background: #fff;

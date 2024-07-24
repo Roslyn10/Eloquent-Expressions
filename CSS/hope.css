@@ -8,7 +8,10 @@
     font-family: 'Dokdo', system-ui;
 }
 body{
-    background: #e89337;
+    background-image: url('Images/Hope-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .quote-box {
     background: #fff;
