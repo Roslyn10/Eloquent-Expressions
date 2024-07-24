@@ -1,46 +1,47 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Quotes about Change</title>
-        <link rel="stylesheet" href="/CSS/change.css">
-    </head>
-    <body>
-        <div class="quote-box">
-            <h2>Quotes about Change</h2>
-            <blockquote id="quote-text">Fetching quote...</blockquote>
-            <span id="quote-author"></span>
-            <div>
-                <button onclick="fetchQuote()">New quote</button>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <title>Quotes about Change</title>
+    <link rel="stylesheet" href="/CSS/change.css">
+</head>
+<body>
+    <div class="quote-box">
+        <h2>Quotes about Change</h2>
+        <blockquote id="quote-text">Fetching quote...</blockquote>
+        <span id="quote-author"></span>
+        <div>
+            <button onclick="fetchQuote()">New quote</button>
         </div>
+        <img src="Images/Change-background.jpg" alt="Background Image" class="img">
+    </div>
 
-        <script>
-            const category = 'change';
-            const apiKey = 'sTOdbVWWBVVvB9AszF2KvA==53Lx5w7HZSpnPTY7';
-            const apiUrl = `https://api.api-ninjas.com/v1/quotes?category=${category}`;
+    <script>
+        const category = 'change';
+        const apiKey = 'sTOdbVWWBVVvB9AszF2KvA==53Lx5w7HZSpnPTY7';
+        const apiUrl = `https://api.api-ninjas.com/v1/quotes?category=${category}`;
 
-            async function fetchQuote() {
-                try {
-                    const response = await fetch(apiUrl, {
-                        headers: {
-                            'X-Api-Key': apiKey
-                        }
-                    });
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
+        async function fetchQuote() {
+            try {
+                const response = await fetch(apiUrl, {
+                    headers: {
+                        'X-Api-Key': apiKey
                     }
-                    const data = await response.json();
-                    const quote = data[0];
-                    document.getElementById('quote-text').textContent = quote.quote;
-                    document.getElementById('quote-author').textContent = `— ${quote.author}`;
-                } catch (error) {
-                    console.error('Error fetching quote:', error);
-                    document.getElementById('quote-text').textContent = 'Error fetching quote';
-                    document.getElementById('quote-author').textContent = '';
+                });
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
                 }
+                const data = await response.json();
+                const quote = data[0];
+                document.getElementById('quote-text').textContent = quote.quote;
+                document.getElementById('quote-author').textContent = `— ${quote.author}`;
+            } catch (error) {
+                console.error('Error fetching quote:', error);
+                document.getElementById('quote-text').textContent = 'Error fetching quote';
+                document.getElementById('quote-author').textContent = '';
             }
-            fetchQuote();
-        </script>
-    </body>
+        }
+        fetchQuote();
+    </script>
+</body>
 </html>
