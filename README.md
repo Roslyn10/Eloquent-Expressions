@@ -2,6 +2,8 @@
 
 *“Inspiring moments, one quote at a time”*
 
+![Main Page of the website]('Screenshot 2024-07-24 143302.png')
+
 ## Description
 
 Are you seeking inspiration? Looking for a fresh perspective? Want to be motivated by the words of others?
@@ -15,6 +17,8 @@ I'm a student at ALX looking to delve into the world of Software Engineering. As
 Through this website, I aim to share quotes that have personally motivated me and offer insights into the thoughts of others. Join us in shaping our journeys and inspiring each other to achieve more.
 
 ## Features
+
+![Quote of the day]('Screenshot 2024-07-24 143332.png')
 
 - **Endless Quotes**: Get a random quote each time you click a button.
 - **Curated Collection**: A diverse selection of quotes from famous authors, historical figures, and more.
