@@ -8,7 +8,10 @@
     font-family: 'Princess Sofia', cursive;
 }
 body{
-    background: #810b0b;
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .quote-box {
     background: #fff;
