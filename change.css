@@ -4,11 +4,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'IM Fell English SC', serif;
+    font-family: 'Aboreto', system-ui;
 }
 
 body {
-    background-image: url('/Images/Change-background.jpg');
+    background-image: url('Images/Change-background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -24,7 +24,9 @@ body {
     padding: 40px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 20px 20px 10px rgba(0, 0, 0, 0.15), 0 -20px 20px 10px rgba(0, 0, 0, 0.15);
+    box-shadow:
+    0 20px 20px 10px rgba(0, 0, 0, 0.15),
+    0 -20px 20px 10px rgba(0, 0, 0, 0.15);
 }
 
 .quote-box h2 {
@@ -90,10 +92,4 @@ body {
     justify-content: center;
     margin: 5px;
     cursor: pointer;
-}
-
-.img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
