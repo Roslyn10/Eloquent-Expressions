@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-// Defines the category of the quotes
-const category = 'Hope';
-// API key for the authenticaation
-const apiKey = 'ee2i+GBH+ll4NVAvjR79+A==YUuxVikUBL6EyKtn';
+// Defines the catergory of the quotes
+const category = 'Success';
+// API key authentication
+const apiKey = 'ipf6Izv5ye4EMjIEai8x5w==aDkza9dtDhfsu3cN';
 // URL for the API request to fetch the quotes
 const apiUrl = `https://api.api-ninjas.com/v1/quotes?category=${category}`;
 
@@ -20,15 +20,15 @@ async function fetchQuote() {
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
-        // Parse the JSON data from thr response
+        // PArse the JSON data from the response
         const data = await response.json();
-        // Get the first qupte from the data
+        // Get the first quote from the data
         const quote = data[0];
-        // Update the quote text and author on the page
+        //Update the quote text and author on the page
         document.getElementById('quote-text').textContent = quote.quote;
         document.getElementById('quote-author').textContent = `— ${quote.author}`;
     } catch (error) {
-        // Hanles errors 
+        // Handle errors
         console.error('Error fetching quote:', error);
         // Displays error messages on the page
         document.getElementById('quote-text').textContent = 'Error fetching quote';

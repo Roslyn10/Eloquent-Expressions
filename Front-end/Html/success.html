@@ -1,46 +1,32 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!--Meta charset declaration for proper character encoding-->
+        <meta charset="UTF-8">
+        <!--Sets the viewport to make the website responsive on different devices-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Title of the webpage displayed in the browser tab-->
         <title>Success</title>
+        <!--Link to external CSS stlylsheets for styling in the page-->
         <link rel="stylesheet" href="success.css">
     </head>
     <body>
+        <!--Container for displaying the quote-->
         <div class="quote-box">
+            <!--Header for the section-->
+            <!--Span element to show the quote text-->
             <h2>Quotes about Success</h2>
+            <!--Container for the button to fetch a new quote-->
             <blockquote id="quote-text"></blockquote>
+            <!--Container for the button to fetch a new quote-->
             <span id="quote-author"></span>
             <div>
+                <!--Button that triggers fetching a new quote when clicked-->
                 <button onclick="fetchQuote()">New quote</button>
             </div>
         </div>
     
-        <script>
-            const category = 'Success';
-            const apiKey = 'ipf6Izv5ye4EMjIEai8x5w==aDkza9dtDhfsu3cN';
-            const apiUrl = `https://api.api-ninjas.com/v1/quotes?category=${category}`;
-    
-            async function fetchQuote() {
-                try {
-                    const response = await fetch(apiUrl, {
-                        headers: {
-                            'X-Api-Key': apiKey
-                        }
-                    });
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-                    const data = await response.json();
-                    const quote = data[0];
-                    document.getElementById('quote-text').textContent = quote.quote;
-                    document.getElementById('quote-author').textContent = `— ${quote.author}`;
-                } catch (error) {
-                    console.error('Error fetching quote:', error);
-                    document.getElementById('quote-text').textContent = 'Error fetching quote';
-                    document.getElementById('quote-author').textContent = '';
-                }
-            }
-            fetchQuote();
-        </script>
+        <!--Link to the backend api-->
+        <script src="/Back-end/success-api.js"></script>
     </body>
     </html>

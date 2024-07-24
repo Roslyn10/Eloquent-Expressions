@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes about Education</title>
+    <link rel="stylesheet" href="education.css">
+</head>
+<body>
+    <div class="quote-box">
+        <h2>Quotes about Education</h2>
+        <blockquote id="quote-text">Fetching quote...</blockquote>
+        <span id="quote-author"></span>
+        <div>
+            <button onclick="fetchQuote()">New quote</button>
+        </div>
+    </div>
+
+    <script>
+        const category = 'education';
+        const apiKey = 'P09T+dCGZ6rXJv8y45VTOg==NUeBT6Qtvnmamr5B';
+        const apiUrl = `https://api.api-ninjas.com/v1/quotes?category=${category}`;
+
+        async function fetchQuote() {
+            try {
+                const response = await fetch(apiUrl, {
+                    headers: {
+                        'X-Api-Key': apiKey
+                    }
+                });
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                const quote = data[0];
+                document.getElementById('quote-text').textContent = quote.quote;
+                document.getElementById('quote-author').textContent = `— ${quote.author}`;
+            } catch (error) {
+                console.error('Error fetching quote:', error);
+                document.getElementById('quote-text').textContent = 'Error fetching quote';
+                document.getElementById('quote-author').textContent = '';
+            }
+        }
+        fetchQuote();
+    </script>
+</body>
+</html>
