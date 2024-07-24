@@ -2,7 +2,7 @@
 
 *“Inspiring moments, one quote at a time”*
 
-![Main Page of the website](Screenshot 2024-07-24 143302.png)
+![Main Page of the website](Main-page.png)
 
 ## Description
 
@@ -18,7 +18,7 @@ Through this website, I aim to share quotes that have personally motivated me an
 
 ## Features
 
-![Quote of the day](Screenshot 2024-07-24 143332.png)
+![Quote of the day](Daily-quote.png)
 
 - **Endless Quotes**: Get a random quote each time you click a button.
 - **Curated Collection**: A diverse selection of quotes from famous authors, historical figures, and more.
