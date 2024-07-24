@@ -20,7 +20,7 @@ async function fetchQuote() {
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
-        // Parse the JSOn data from the response
+        // Parse the JSON data from the response
         const data = await response.json();
         // Get the first quote from the data
         const quote = data[0];
