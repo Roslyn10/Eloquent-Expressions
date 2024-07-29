@@ -9,11 +9,18 @@
     font-family: 'Playwrite CL', cursive ;
 }
 
-/*Body styling*/
-body{
-    background: #7b8fef;
+/* Ensure the html and body elements fill the viewport */
+html, body {
+    height: 100%;
 }
 
+/* Body styling */
+body {
+    background-image: url('Random-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 /*Styling for the container*/
 .quote-box {
     background: #fff;
