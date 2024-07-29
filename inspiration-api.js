@@ -2,23 +2,23 @@
 
 // Defines the category of the quotes
 const category = 'inspirational';
-// API key for the authentication
+// API key for authentication (consider moving this to server-side for security)
 const apiKey = 'LWQzMWWMsnKaH6wqCe4ISQ==r25JemQVIE1PLkRK';
 // URL for the API request to fetch the quotes
 const apiUrl = `https://api.api-ninjas.com/v1/quotes?category=${category}`;
 
-// Funcation to fetch a new quote from the API
+// Function to fetch a new quote from the API
 async function fetchQuote() {
     try {
         // Makes a request to the API
         const response = await fetch(apiUrl, {
             headers: {
-                'X-Api-Key': apiKey //Includes the API key in the request
+                'X-Api-Key': apiKey // Includes the API key in the request
             }
         });
-        // Check if the responses is ok (status code 200-209)
+        // Check if the response is ok (status code 200-299)
         if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+            throw new Error(`HTTP error! Status: ${response.status}`);
         }
         // Parse the JSON data from the response
         const data = await response.json();
@@ -28,12 +28,13 @@ async function fetchQuote() {
         document.getElementById('quote-text').textContent = quote.quote;
         document.getElementById('quote-author').textContent = `— ${quote.author}`;
     } catch (error) {
-        // Handles error 
+        // Handles errors
         console.error('Error fetching quote:', error);
-        // Displays error messages on the pages 
+        // Displays error messages on the page
         document.getElementById('quote-text').textContent = 'Error fetching quote';
         document.getElementById('quote-author').textContent = '';
     }
 }
-// Fetch a quote when the page loads 
-fetchQuote();
+
+// Fetch a quote when the page loads
+document.addEventListener('DOMContentLoaded', fetchQuote);

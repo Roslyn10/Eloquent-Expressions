@@ -1,30 +1,32 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <!--Meta charset declaration for proper character encoding-->
-        <meta charset="UTF-8">
-        <!--Sets the viewport to make the website responsive on different devices-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--Title of the webpage displayed in the browser tab-->
-        <title>Inspiration</title>
-        <!--Link to external CSS stylesheets for styling the page-->
-        <link rel="stylesheet" href="inspiration.css">
-    </head>
-    <!--Container for displaying the quote-->
-    <div class="quote-box"></div>
-    <!--Header for the section-->
+<html lang="en">
+<head>
+    <!-- Meta charset declaration for proper character encoding -->
+    <meta charset="UTF-8">
+    <!-- Sets the viewport to make the website responsive on different devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the webpage displayed in the browser tab -->
+    <title>Inspiration</title>
+    <!-- Link to external CSS stylesheets for styling the page -->
+    <link rel="stylesheet" href="inspiration.css">
+</head>
+<body>
+    <!-- Container for displaying the quote -->
+    <div class="quote-box">
+        <!-- Header for the section -->
         <h2>Quotes to Inspire</h2>
-        <!--Span elements to show the quote text-->
+        <!-- Blockquote element to show the quote text -->
         <blockquote id="quote-text"></blockquote>
-        <!--Container for the button to fetch a new quote-->
+        <!-- Span element to show the quote author -->
         <span id="quote-author"></span>
+        <!-- Container for the button to fetch a new quote -->
         <div>
-            <!--Button that triggers fetching a new quote when clicked-->
+            <!-- Button that triggers fetching a new quote when clicked -->
             <button onclick="fetchQuote()">New quote</button>
         </div>
     </div>
 
-    <!--Link to the backend api-->
+    <!-- Link to the backend API JavaScript file -->
     <script src="inspiration-api.js"></script>
 </body>
 </html>
