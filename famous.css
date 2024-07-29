@@ -1,47 +1,51 @@
-/*Importing fonts from Google*/
+/* Importing fonts from Google */
 @import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Aclonica&family=Aladin&family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Allerta+Stencil&display=swap');
 
-/*Applies style to all elements*/
-*{
+/* Applies style to all elements */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Allerta Stencil', sans-serif;
 }
 
-/*Body styling*/
-body{
+/* Ensure html and body fill the viewport */
+html, body {
+    height: 100%;
+}
+
+/* Body styling */
+body {
     background-image: url('Famous-background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/*Styling for container*/
+/* Styling for container */
 .quote-box {
     background: #fff;
     width: 700px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     padding: 40px;
     border-radius: 10px;
     text-align: center;
     box-shadow:
-    0 20px 20px 10px rgba(0, 0, 0, 0.15),
-    0 -20px 20px 10px rgba(0, 0, 0, 0.15);
+        0 20px 20px 10px rgba(0, 0, 0, 0.15),
+        0 -20px 20px 10px rgba(0, 0, 0, 0.15);
 }
 
-/*Styling for header in container*/
-.quote-box h2{
+/* Styling for header in container */
+.quote-box h2 {
     font-size: 32px;
     margin-bottom: 40px;
     position: relative;
 }
 
-/*Styling psuedo-element after the header in the container*/
-.quote-box h2::after{
+/* Styling pseudo-element after the header in the container */
+.quote-box h2::after {
     content: '';
     width: 75px;
     height: 3px;
@@ -50,50 +54,50 @@ body{
     position: absolute;
     bottom: -10px;
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
 }
 
-/*Styling for blockquote*/
-.quote-box blockquote{
+/* Styling for blockquote */
+.quote-box blockquote {
     font-size: 26px;
     min-height: 110px;
 }
 
-/*Styling for pseudo-elements before and after blockquote*/
-.quote-box blockquote::before, .quote-box blockquote::after{
+/* Styling for pseudo-elements before and after blockquote */
+.quote-box blockquote::before,
+.quote-box blockquote::after {
     content: '"';
 }
 
-/*Styling for pseudo-element before the span inside the container*/
-.quote-box span::before{
+/* Styling for pseudo-element before the span inside the container */
+.quote-box span::before {
     content: '';
     width: 20px;
     height: 2px;
-    background:#19599c;
+    background: #19599c;
     position: absolute;
     top: 50%;
     left: -30px;
 }
 
-/*Styling for the span inside the container*/
-.quote-box span{
+/* Styling for the span inside the container */
+.quote-box span {
     display: block;
     margin-top: 10px;
     float: right;
     position: relative;
-
 }
 
-/*Styling for the div inside the container*/
-.quote-box div{
+/* Styling for the div inside the container */
+.quote-box div {
     width: 100%;
     margin-top: 50px;
-    display:flex;
+    display: flex;
     justify-content: center;
 }
 
-/*Styling for the button in container*/
-.quote-box button{
+/* Styling for the button in container */
+.quote-box button {
     background: #f669c7;
     color: #fff;
     border-radius: 25px;
