@@ -30,6 +30,7 @@ async function fetchQuote() {
     }
 }
 
+//Function to tweet favourite quotes
 function tweet() {
     if (currentQuote && currentQuote.quote) {
         const tweetText = encodeURIComponent(`${currentQuote.quote} — ${currentQuote.author}`);

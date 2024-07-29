@@ -35,5 +35,16 @@ async function fetchQuote() {
         document.getElementById('quote-author').textContent = '';
     }
 }
+
+//Function to tweet favourite quotes
+function tweet() {
+    if (currentQuote && currentQuote.quote) {
+        const tweetText = encodeURIComponent(`${currentQuote.quote} — ${currentQuote.author}`);
+        window.open(`https://twitter.com/intent/tweet?text=${tweetText}`, "Tweet Window", "width=600, height=300");
+    } else {
+        alert('No quote to tweet.');
+    }
+}
+
 // Fetch a quote when the page loads 
 fetchQuote();
