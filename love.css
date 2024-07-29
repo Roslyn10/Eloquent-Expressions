@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Jacques Francois Shadow', serif;
+    font-family: 'Jacques Francois Shadow', serif, black;
 }
 
 /* Ensure the html and body elements fill the viewport */
