@@ -96,22 +96,7 @@ body {
     justify-content: center;
 }
 
-/* Styling for the button in container */
-.quote-box button {
-    background: #f669c7;
-    color: #fff;
-    border-radius: 25px;
-    border: 1px solid #f669c7;
-    width: 250px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 5px;
-    cursor: pointer;
-}
-
-/* Styling for the button link */
+/* Styling for buttons and links styled as buttons */
 .button {
     display: inline-block;
     padding: 10px 20px;
@@ -124,8 +109,22 @@ body {
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin: 5px; /* Ensures spacing between button and link */
 }
 
 .button:hover {
     background-color: #0056b3;
+}
+
+/* Styling for button specifically */
+.quote-box button {
+    background: #f669c7;
+    color: #fff;
+    border-radius: 25px;
+    border: 1px solid #f669c7;
+    width: 250px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
