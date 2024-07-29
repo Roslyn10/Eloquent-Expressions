@@ -1,4 +1,4 @@
-/*Styling for the body*/
+/* Styling for the body */
 body {
     font-family: Arial, sans-serif;
     background-image: url('9604897.jpg');
@@ -8,9 +8,12 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/*Styling for the header*/
+/* Styling for the header */
 header {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
@@ -18,20 +21,20 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/*Styling for the navigation*/
+/* Styling for the navigation */
 nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-/*Styling for the navigation list items*/
+/* Styling for the navigation list items */
 nav ul li {
     display: inline;
     margin: 0 15px;
 }
 
-/*Styling for navigation links*/
+/* Styling for navigation links */
 nav ul li a {
     text-decoration: none;
     color: #333;
@@ -39,12 +42,12 @@ nav ul li a {
     transition: color 0.3s;
 }
 
-/*Styling for navigation links on hover*/
+/* Styling for navigation links on hover */
 nav ul li a:hover {
     color: #8a4b8a;
 }
 
-/*Styling for container elements*/
+/* Styling for container elements */
 .container {
     max-width: 960px;
     margin: 20px auto;
@@ -52,31 +55,29 @@ nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;  /* Ensures container takes up remaining space */
 }
 
-/*Styling for section elements*/
+/* Styling for section elements */
 section {
     padding: 20px;
     text-align: center;
 }
 
-/*Styling for section headings*/
+/* Styling for section headings */
 section h2 {
     color: #8a4b8a;
 }
 
-/*Styling for the footer*/
+/* Styling for the footer */
 footer {
     background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
     padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/*Responsive design for navigation on small screens*/
+/* Responsive design for navigation on small screens */
 @media (max-width: 600px) {
     nav ul li {
         display: block;
