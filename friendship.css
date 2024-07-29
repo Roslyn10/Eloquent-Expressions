@@ -1,12 +1,12 @@
 /* Importing fonts from Google */
-@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Aclonica&family=Aladin&family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Allerta+Stencil&family=Almendra+Display&family=Bad+Script&family=Cherry+Swash:wght@400;700&family=Cinzel+Decorative:wght@400;700;900&family=Dokdo&family=Emilys+Candy&family=Jacques+Francois+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Aclonica&family=Aladin&family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Allerta+Stencil&family=Almendra+Display&family=Bad+Script&display=swap');
 
 /* Applies style to all elements */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Jacques Francois Shadow', serif;
+    font-family: 'Bad Script', cursive;
 }
 
 /* Ensure the html and body elements fill the viewport */
@@ -16,12 +16,10 @@ html, body {
 
 /* Body styling */
 body {
-    background-image: url('Love-background.jpg');
+    background-image: url('Friendship-background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100%; /* Ensure the body height is 100% */
-    width: 100%; /* Ensure the body width is 100% */
 }
 
 /* Styling for container */
