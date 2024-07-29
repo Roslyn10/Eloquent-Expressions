@@ -9,26 +9,33 @@
     font-family: 'Cinzel Decorative', serif;
 }
 
+/* Ensure html and body fill the viewport */
+html, body {
+    height: 100%;
+}
+
 /* Body styling */
 body {
     background-image: url('health-background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Styling for container */
 .quote-box {
     background: #fff;
     width: 700px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     padding: 40px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 20px 20px 10px rgba(0, 0, 0, 0.15), 0 -20px 20px 10px rgba(0, 0, 0, 0.15);
+    box-shadow:
+        0 20px 20px 10px rgba(0, 0, 0, 0.15),
+        0 -20px 20px 10px rgba(0, 0, 0, 0.15);
+    position: relative; /* Changed from absolute to relative */
 }
 
 /* Styling for header in container */
