@@ -115,10 +115,10 @@ body {
 
 /* Styling for the button in container */
 .quote-box button {
-    background: #f669c7;
-    color: #fff;
+    background: #415ed3;
+    color: #f2e6e6;
     border-radius: 25px;
-    border: 1px solid #f669c7;
+    border: 1px solid #69b7f6;
     width: 250px;
     height: 50px;
     display: flex;
@@ -129,5 +129,5 @@ body {
 }
 
 .quote-box button:hover {
-    background: #f447a1;
+    background: #07bcea;
 }
