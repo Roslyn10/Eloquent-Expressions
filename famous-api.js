@@ -40,7 +40,7 @@ async function fetchQuote() {
 function tweet() {
     if (currentQuote && currentQuote.quote) {
         const tweetText = encodeURIComponent(`${currentQuote.quote} — ${currentQuote.author}`);
-        window.open(`https://twitter.com/intent/tweet?text=${tweetText}`, "Tweet Window", "width=600, height=300");
+        window.open(`https://twitter.com/intent/tweet?text=`, + {tweetText}, "Tweet Window", "width=600, height=300");
     } else {
         alert('No quote to tweet.');
     }
