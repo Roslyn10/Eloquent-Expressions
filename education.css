@@ -1,46 +1,67 @@
 /*Importing fonts from Google*/
 @import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Aclonica&display=swap');
 
-/*Applies style to all elements*/
+/* Applies style to all elements */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Aboreto', system-ui;
+    font-family: 'Emilys Candy', serif;
 }
 
-/*Body styling*/
+/* Ensure html and body fill the viewport */
+html, body {
+    height: 100%;
+}
+
+/* Body styling */
 body {
-    background-image: url('Education-background.jpg');
+    background-image: url('Inspiration-background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/*Styling for container*/
+/* Styling for container */
 .quote-box {
     background: #fff;
     width: 700px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     padding: 40px;
     border-radius: 10px;
     text-align: center;
-    box-shadow:
-    0 20px 20px 10px rgba(0, 0, 0, 0.15),
-    0 -20px 20px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 
+        0 20px 20px 10px rgba(0, 0, 0, 0.15),
+        0 -20px 20px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
 }
 
-/*Styling for header in container*/
+/* Styling for the home button */
+.home-button {
+    background: #f669c7;
+    color: #fff;
+    border: none;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 0 0 20px 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    cursor: pointer;
+}
+
+/* Styling for header in container */
 .quote-box h2 {
     font-size: 32px;
     margin-bottom: 40px;
     position: relative;
 }
 
-/*Styling psuedo-element after the header in the container*/
+/* Styling pseudo-element after the header in the container */
 .quote-box h2::after {
     content: '';
     width: 75px;
@@ -50,21 +71,22 @@ body {
     position: absolute;
     bottom: -10px;
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
 }
 
-/*Styling for blockquote*/
+/* Styling for blockquote */
 .quote-box blockquote {
     font-size: 26px;
     min-height: 110px;
 }
 
-/*Styling for pusedo-elements before and after blocjquote*/
-.quote-box blockquote::before, .quote-box blockquote::after {
+/* Styling for pseudo-elements before and after blockquote */
+.quote-box blockquote::before,
+.quote-box blockquote::after {
     content: '"';
 }
 
-/*Styling for pseudo-element before the span inside the container*/
+/* Styling for pseudo-element before the span inside the container */
 .quote-box span::before {
     content: '';
     width: 20px;
@@ -75,7 +97,7 @@ body {
     left: -30px;
 }
 
-/*Styling for the span inside the container*/
+/* Styling for the span inside the container */
 .quote-box span {
     display: block;
     margin-top: 10px;
@@ -83,7 +105,7 @@ body {
     position: relative;
 }
 
-/*Styling for the div inside the container*/
+/* Styling for the div inside the container */
 .quote-box div {
     width: 100%;
     margin-top: 50px;
@@ -91,17 +113,21 @@ body {
     justify-content: center;
 }
 
-/*Styling for the button in container*/
+/* Styling for the button in container */
 .quote-box button {
-    background: #f669c7;
-    color: #fff;
+    background: #415ed3;
+    color: #000000;
     border-radius: 25px;
-    border: 1px solid #f669c7;
-    width: 250px;
+    border: 1px solid #69b7f6;
+    width: 50px;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 5px;
     cursor: pointer;
+}
+
+.quote-box button:hover {
+    background: #07bcea;
 }
