@@ -12,18 +12,18 @@
 <body>
     <header>
         <h1>Eloquent Expressions</h1>
-        <nav aria-label="Main Navigation">
+        <nav>
             <ul>
-                <li><a href="#intro" aria-label="Introduction">Intro</a></li>
-                <li><a href="#about" aria-label="About Us">About Us</a></li>
-                <li><a href="#features" aria-label="Features">Features</a></li>
-                <li><a href="Eloquent-expressions.html" target="_blank" aria-label="Visit main website">Visit our main website</a></li>
+                <li><a href="#intro">Intro</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="Eloquent-expressions.html" target="_blank">Visit our main website</a></li>
             </ul>
-        </nav>
+        </nav>        
     </header>
 
     <section id="intro" class="container">
-        <h2>Are you seeking inspiration? Looking for a fresh perspective? Want to be motivated by the words of others?</h2>
+        <h2>Are You Seeking Inspiration? Looking for a Fresh Perspective? Want to be Motivated by the Words of Others?</h2>
         <p>Welcome to Eloquent Expressions, where we curate inspiring quotes from various categories.</p>
     </section>
 
@@ -40,10 +40,20 @@
         <p><strong>Tweet</strong> Tweet your favourite quotes</p>
     </section>
 
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    
+
     <footer>
         <p>&copy; 2024 Eloquent Expressions. All rights reserved.</p>
     </footer>
 </body>
 </html>
-
-

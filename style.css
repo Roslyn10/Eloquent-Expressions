@@ -11,6 +11,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-attachment: fixed; /* For a parallax effect */
 }
 
 /* Styling for the header */
@@ -52,10 +53,10 @@ nav ul li a:hover {
     max-width: 960px;
     margin: 20px auto;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.95);
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    flex: 1;  /* Ensures container takes up remaining space */
+    flex: 1;
 }
 
 /* Styling for section elements */
@@ -79,8 +80,19 @@ footer {
 
 /* Responsive design for navigation on small screens */
 @media (max-width: 600px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     nav ul li {
         display: block;
         margin: 10px 0;
     }
+}
+
+
+header, footer {
+    background-color: rgba(255, 255, 255, 0.9);
 }
