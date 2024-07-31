@@ -21,14 +21,20 @@
             <span id="quote-author"></span>
             <div>
                 <!--Button that triggers fetching a new quote when clicked-->
-                <button onclick="fetchQuote()">Alternative quote</button>
+                <button onclick="fetchQuote()">Alter quote</button>
                 <!-- Button that allows the user to tweet a quote-->
                 <button onclick="tweet()">Tweet</button> 
             </div>
         </div>
 
         <!--Link to the backend api-->
-        <script src="family-api.js">
+        <script src="family-api.js"></script>
+
+        <script>
+            // Button in the top right corner to go home 
+            function goHome() {
+                window.location.href = ' Eloquent-expressions.html '; 
+            }
         </script>
     </body>
 </html>
