@@ -7,30 +7,23 @@ const apiKey = 'zcwXT4Ao+jzDvWed2gRXpg==JBxojqpT5T9IkWQF';
 // URL for the API request to fetch the quotes
 const apiUrl = `https://api.api-ninjas.com/v1/quotes?category=${category}`;
 
-// Function to fetch a new quote from the API 
+// Function to fetch a new quote from the API
 async function fetchQuote() {
     try {
-        // Makes a request to the API
         const response = await fetch(apiUrl, {
             headers: {
-                'X-Api-Key': apiKey // Includes the API key in the request
+                'X-Api-Key': apiKey
             }
         });
-        // Check if the response is ok (status code 200-209)
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
-        // Parse the JSON ata from the response
         const data = await response.json();
-        // Get the first quote from the data
-        const quote = data[0];
-        // Update the quote text and author on the ogae
-        document.getElementById('quote-text').textContent = quote.quote;
-        document.getElementById('quote-author').textContent = `— ${quote.author}`;
+        currentQuote = data[0]; // Store the current quote
+        document.getElementById('quote-text').textContent = currentQuote.quote;
+        document.getElementById('quote-author').textContent = `— ${currentQuote.author}`;
     } catch (error) {
-        // Handles errors
         console.error('Error fetching quote:', error);
-        // Displays error messages on the page
         document.getElementById('quote-text').textContent = 'Error fetching quote';
         document.getElementById('quote-author').textContent = '';
     }
@@ -40,7 +33,7 @@ async function fetchQuote() {
 function tweet() {
     if (currentQuote && currentQuote.quote) {
         const tweetText = encodeURIComponent(`${currentQuote.quote} — ${currentQuote.author}`);
-        window.open(`https://twitter.com/intent/tweet?text=`, + {tweetText}, "Tweet Window", "width=600, height=300");
+        window.open(`https://twitter.com/intent/tweet?text=${tweetText}`, "Tweet Window", "width=600, height=300");
     } else {
         alert('No quote to tweet.');
     }
