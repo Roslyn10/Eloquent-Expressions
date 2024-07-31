@@ -111,3 +111,17 @@ body {
     margin: 5px;
     cursor: pointer;
 }
+
+.home-button {
+    background: #3487d4;
+    color: #fff;
+    border: none;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 0 0 20px 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    cursor: pointer;
+}
