@@ -40,4 +40,4 @@ function tweet() {
 }
 
 // Fetch a quote when the page loads
-fetchQuote();
+fetchQuote();s
