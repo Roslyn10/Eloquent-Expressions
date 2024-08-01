@@ -1,12 +1,12 @@
 /* Importing fonts from Google */
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Aclonica&family=Aladin&family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Allerta+Stencil&family=Almendra+Display&family=Bad+Script&family=Cherry+Swash:wght@400;700&family=Cinzel+Decorative:wght@400;700;900&family=Dokdo&family=Emilys+Candy&family=Jacques+Francois+Shadow&family=Mate:ital@0;1&family=Princess+Sofia&family=Spirax&family=Stint+Ultra+Condensed&display=swap');
 
 /* Applies style to all elements */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Emilys Candy', serif;
+    font-family: "Spirax", system-ui;
 }
 
 /* Ensure html and body fill the viewport */
